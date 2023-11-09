@@ -8,16 +8,15 @@ import pandas as pd
 
 
 def get_data(path, max_len=None, mode='train'):
-    """获取数据
 
-    Args:
-        path (_type_): 文件路径
-        max_len (_type_, optional): 用于训练/测试的数据个数. Defaults to None.
-        mode (str, optional): 加载训练集数据还是测试集数据. Defaults to 'train'.
+    # Get data
+# Args:
+#     path (_type_): File path
+#     max_len (_type_, optional): Number of data to be used for training/testing. Defaults to None.
+#     mode (str, optional): Load training set data or test set data. Defaults to 'train'.
+# Returns:
+#     _type_: Returns text and corresponding labels
 
-    Returns:
-        _type_: 返回文本 和 相应的标签
-    """
     df = pd.read_csv(os.path.join(path, f'{mode}.csv'))
 
     all_text = df.comment_text.values.tolist()
@@ -41,7 +40,7 @@ class TCdataset(Dataset):
         label = self.all_label[x]
 
         text_prompt = self.prompt_text1 + text + self.prompt_text2
-        return text_prompt, label, len(text_prompt)+1, label #给他1个[MASK],所以加1
+        return text_prompt, label, len(text_prompt)+1, label # Give it one [MASK], so add 1
     def process_data(self,data):
         batch_text,batch_label,batch_len,cla = zip(*data)
         batch_max = max(batch_len)+1
