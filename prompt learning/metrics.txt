@@ -1,0 +1,6 @@
+2023-11-12 20:55:18,336 - INFO - Accuracy: 0.8056
+2023-11-12 20:55:18,346 - INFO - Correctly predicted cases: 123393 out of 153164
+2023-11-12 20:55:18,346 - INFO - Incorrectly predicted cases: 29771 out of 153164
+2023-11-12 20:55:18,624 - INFO - Precision: 0.1564
+2023-11-12 20:55:18,626 - INFO - Recall: 0.8581
+2023-11-12 20:55:18,626 - INFO - F1 Score: 0.2646
