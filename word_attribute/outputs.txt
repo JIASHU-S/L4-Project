@@ -1,0 +1,6 @@
+Overall accuracy: 0.5056
+Accuracy per class:
+Positive: 0.9059，Negative: 0.0640
+Precision:0.9458
+Recall: 0.5026
+F1: 0.6564
